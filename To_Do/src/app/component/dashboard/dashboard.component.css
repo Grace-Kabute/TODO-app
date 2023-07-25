@@ -1,0 +1,14 @@
+.container-fluid{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightgrey;
+}
+.size{
+    max-width: 400px;
+}
+h3{
+    margin: .8em 0em;
+}

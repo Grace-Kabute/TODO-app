@@ -1,0 +1,49 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ Add task
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">taskify</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup] = "addedTasks" >
+          <div class="mb-3">
+            <label for="task" class="form-label">Task: </label>
+            <input type="text" class="form-control" id="task" formControlName="task" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="date" class="form-label">Due date: </label>
+            <input type="date" class="form-control" id="date" formControlName="date">
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox"id="completed" formControlName="completed">
+            <label class="form-check-label" for="completed">
+              Completed
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-primary" type="button" (click)="addTask()">Add task</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+tasksList: any[] = [];
+addTask(){
+  if (this.addedTasks.valid) {
+    const newTask = { ...this.addedTasks.value }; 
+    this.tasksList.push(newTask); 
+    console.log('Tasks List:', this.tasksList);
+    this.addedTasks.reset();
+    this.taskObject.task = this.addedTasks.value.task;
+    this.taskObject.date = this.addedTasks.value.date;
+    this.taskObject.completed = this.addedTasks.value.completed;
+}
+}
+-->

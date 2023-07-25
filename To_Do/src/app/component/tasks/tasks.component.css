@@ -1,0 +1,18 @@
+.links{
+    display: flex;
+    justify-content: space-evenly;
+}
+h3{
+    text-align: center;
+    margin: 1em 0em;
+}
+.nav-link{
+color: black;
+font-size: large;
+}
+.nav-link:active{
+background-color: rgb(63, 116, 63);
+}
+.navbar-brand{
+font-weight: bold;
+}
